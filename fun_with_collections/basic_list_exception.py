@@ -17,11 +17,13 @@ def make_list():
         while True:
             try:
                 user_input = int(get_input())
+                if user_input < 1 or user_input > 50:
+                    raise ValueError
+                a_list.insert(index, user_input)
+                break
             except ValueError:
-                print('User must submit a number.')
+                print('User must submit a number between 1 and 50.')
                 continue
-            a_list.insert(index, user_input)
-            break
     return a_list
 
 
