@@ -2,8 +2,7 @@
 Program: sort and search_list.py
 Author: Paul Ford
 Last date modified: 06/21/2020
-Purpose: uses inner functions to be able to
-         get a list of numbers from a user
+Purpose: sort and search list.
 """
 
 
@@ -16,11 +15,10 @@ def search_list(object):
     """
     a_list = [1, 3, 55, 99]
     try:
-        #need to return index or negative 1 so both need a return
+        # need to return index or negative 1 so both need a return
         return a_list.index(object)
     except ValueError:
         return -1
-
 
 
 def sort_list():
@@ -28,11 +26,11 @@ def sort_list():
     Sorts the list and then returns it.
     :return:
     """
-    #just return the list since sort does it to the object.
+    # just return the list since sort does it to the object.
     a_list = [6, 3, 12, 11, -85]
     a_list.sort()
     return a_list
 
 
-print(search_list(-4))
-print(sort_list())
+if __name__ == '__main__':
+    pass

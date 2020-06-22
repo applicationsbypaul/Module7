@@ -1,3 +1,9 @@
+"""
+Program: test_sort and search_list.py
+Author: Paul Ford
+Last date modified: 06/21/2020
+Purpose: test sort and serach
+"""
 import unittest
 
 from fun_with_collections.sort_and_search_list import search_list, sort_list
