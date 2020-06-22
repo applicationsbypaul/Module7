@@ -9,8 +9,11 @@ class MyTestCase(unittest.TestCase):
         test_array = arr.array('i', [-4, 2, 3, 45, 50, 66, 99])
         self.assertEqual(sort_array(), test_array)
 
-    def test_search(self):
-        self.assertEqual(search_array(), False)
+    def test_search_not_in_array(self):
+        self.assertEqual(search_array(-99), -1)
+
+    def test_search_in_array(self):
+        self.assertEqual(search_array(45), 1)
 
 
 if __name__ == '__main__':
