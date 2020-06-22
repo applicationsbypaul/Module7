@@ -15,3 +15,7 @@ def in_dict(dictionary, data):
     :return: A boolean if the data is in the dictionary
     """
     return data in dictionary
+
+
+if __name__ == '__main__':
+    pass
