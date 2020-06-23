@@ -5,7 +5,7 @@ from Module8.more_fun_with_collections.assign_average import switch_average
 
 class MyTestCase(unittest.TestCase):
     def test_switch_average_A(self):
-        self.assertEqual(switch_average(), 'a')
+        self.assertEqual(switch_average('A'), 'a')
 
     def test_switch_average_B(self):
         self.assertEqual(switch_average(), 'b')
