@@ -11,6 +11,7 @@ def switch_average(key):
     try:
         result = dict_test[key]
     except KeyError:
+        # this would be the defualt since the key is not in the dictionary
         result = -1
     return result
 
