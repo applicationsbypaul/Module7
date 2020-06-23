@@ -16,9 +16,9 @@ class MyTestCase(unittest.TestCase):
     def test_switch_average_D(self):
         self.assertEqual(switch_average('D'), 'd')
 
+    def test_switch_average_E(self):
+        self.assertEqual(switch_average('E'), 'e')
 
-# def test_switch_average_E(self):
-#     self.assertEqual(switch_average(), 'e')
 
 # def test_switch_average_F(self):
 #    self.assertEqual(switch_average(), -1)
