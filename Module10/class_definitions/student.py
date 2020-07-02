@@ -2,7 +2,7 @@ class Student:
     """Student class"""
     def __init__(self, lname, fname, major, gpa=0.0):
         name_characters = set("ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz'-")
-        ssn_characters = set("1234567890-")
+        gpa_characters = set("1234567890.")
         if not (name_characters.issuperset(lname) and name_characters.issuperset(fname)):
             raise ValueError
         self.last_name = lname
