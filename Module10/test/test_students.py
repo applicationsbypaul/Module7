@@ -22,6 +22,9 @@ class MyTestCase(unittest.TestCase):
         assert student.major == 'Computer Engineering'
         assert student.gpa == 3.5
 
+    def test_object_not_created_error_last_name(self):
+        with self.assertRaises(ValueError):
+            s = Student('123', 'Paul')
 
 
 if __name__ == '__main__':
