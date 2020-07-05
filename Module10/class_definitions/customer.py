@@ -50,6 +50,7 @@ class Customer:
 
 
 # Driver
+"""
 
 # call the constructor, needs to have a first and last name in parameter
 customer1 = Customer(4704345, 'Ford', 'Paul', '713-459-1234', '4045 Aspen Hills Dr. \nAustin, TX')
@@ -59,3 +60,6 @@ print(customer2.display())
 # cleaning up
 del customer1
 del customer2
+
+"""
+

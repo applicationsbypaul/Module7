@@ -4,19 +4,16 @@ Author: Paul Ford
 Last date modified: 07/1/2020
 Purpose: Create invoice class with atr.
 """
+from Module10.class_definitions.customer import Customer
 
 
 class Invoice:
     """Invoice Class"""
 
     # Constructor
-    def __init__(self, invID, custID, lname, fname, phone, addy, items={}):
+    def __init__(self, invID, customer, items={}):
+        self.customer = customer
         self._invoice_id = invID
-        self._customer_id = custID
-        self._last_name = lname
-        self._first_name = fname
-        self._phone_number = phone
-        self._address = addy
         self._items_with_price = items
 
     def __str__(self):
@@ -25,7 +22,7 @@ class Invoice:
         :return: invoice data information.
         """
         return 'Invoice Attributes: {}, {}, {}, {}, {}, {}' \
-            .format(self._invoice_id, self._customer_id,
+            .format(self._invoice_id, self.customer._customer_id,
                     self._last_name, self._first_name, self._phone_number,
                     self._address)
 
@@ -49,19 +46,22 @@ class Invoice:
         the invoice
         :return:
         """
-        tax = .07       # tax for calculation
-        total = 0       # var for total tax
+        tax = .07  # tax for calculation
+        total = 0  # var for total tax
+        print(repr(self.customer))
         for item in self._items_with_price:
             print(item + '.....$' + str(self._items_with_price[item]))
             total = self._items_with_price[item] + total
         tax = round(total * tax, 2)
         total = tax + total
-        print('Tax........' + "${:,.2f}". format(tax))
-        print('Total...... ' + "${:,.2f}". format(total))
+
+        print('Tax........' + "${:,.2f}".format(tax))
+        print('Total...... ' + "${:,.2f}".format(total))
 
 
 # Driver code
-invoice = Invoice(1, 123, '1313 Disneyland Dr, Anaheim, CA 92802', 'Mouse', 'Minnie', '555-867-5309')
+captain_mal = Customer(1, 'Reynolds', 'Mel', 'No phones', 'Firefly, somewhere in the verse')
+invoice = Invoice(1, captain_mal)
 invoice.add_item({'iPad': 799.99})
 invoice.add_item({'Surface': 999.99})
 invoice.create_invoice()
