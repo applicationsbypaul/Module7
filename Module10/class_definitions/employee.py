@@ -11,36 +11,28 @@ class Employee:
     """Employee Class """
 
     # Constructor
-    def __init__(self, lname, fname, add, pnumber, salaried, startdate, salary):
+    def __init__(self, lname, fname, add, pnumber,):
         self._last_name = lname
         self._first_name = fname
         self._address = add
         self._phone_number = pnumber
-        self._salaried = salaried
-        self._start_date = startdate
-        self._salary = salary
 
     def __str__(self):
         """
         unformatted version of Employee data
         :return: str of employee data
         """
-        return "Employee attributes {}, {}, {} ,{}, {}, {}, {}". \
-            format(self._last_name, self._first_name, self._address, self._phone_number,
-                   self._salaried, self._start_date, self._salary)
+        return "Employee attributes {}, {}, {} ,{},". \
+            format(self._last_name, self._first_name, self._address, self._phone_number)
 
     def __repr__(self):
         """
         friendly formatted of Employee Data
         :return: str of formatted employee data.
         """
-        if self._salaried:
-            formatted_salary = "Salaried employee: $" + self._salary + "/year"
-        else:
-            formatted_salary = "Hourly employee: $" + self._salary + "/hour"
+
         return str(self._first_name) + " " + str(self._last_name) + "\n" + \
-            str(self._address) + " \n" + formatted_salary + "\n" + \
-            str("Start date: ") + str(self._start_date)
+            str(self._address) + " \n"
 
     def display(self):
         """
@@ -49,11 +41,6 @@ class Employee:
         """
         return self.__repr__()
 
-    def update_salary(self, new_salary):
-        """
-        updates salary
-        """
-        self._salary = new_salary
 
 
 # Driver
