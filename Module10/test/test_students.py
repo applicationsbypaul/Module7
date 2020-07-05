@@ -5,7 +5,7 @@ from Module10.class_definitions.student import Student
 
 class MyTestCase(unittest.TestCase):
     def setUp(self):
-        self.student = Student('Ford', 'Paul', 'Computer Engineering')
+        self.student = Student('Ford', 'Paul', 'Computer Engineering', 3.5)
 
     def tearDown(self):
         del self.student
@@ -35,7 +35,7 @@ class MyTestCase(unittest.TestCase):
             a = Student('Ford', 'Paul', '234')
 
     def test_object_not_created_error_gpa(self):
-        with self.asserRaises(ValueError):
+        with self.assertRaises(ValueError):
             s = Student('Ford', 'Paul', 'Eng', 4.5)
 
 
