@@ -1,7 +1,7 @@
 """
 Program: Person.py
 Author: Paul Ford
-Last date modified: 07/1/2020
+Last date modified: 07/5/2020
 Purpose: Create a class that uses another object in creation.
 """
 from datetime import datetime

@@ -25,7 +25,7 @@ class Employee:
         unformatted version of Employee data
         :return: str of employee data
         """
-        return "Employee attributes {}, {}, {} ,{}, {}, {}, {}".\
+        return "Employee attributes {}, {}, {} ,{}, {}, {}, {}". \
             format(self._last_name, self._first_name, self._address, self._phone_number,
                    self._salaried, self._start_date, self._salary)
 
@@ -49,16 +49,22 @@ class Employee:
         """
         return self.__repr__()
 
+    def update_salary(self, new_salary):
+        """
+        updates salary
+        """
+        self._salary = new_salary
+
 
 # Driver
-date = datetime(2020, 1, 15)  # create a datetime to confirm
+#date = datetime(2020, 1, 15)  # create a datetime to confirm
 # call the constructor, needs to have a first and last name in parameter
-emp = Employee('Ruiz', 'Matthew', '4045 Aspen Hills Dr. \nAustin, TX', '563-650-2859', False, date,
-               '10.00')  # call the constructor, needs to have a first and last name in parameter
-emp1 = Employee('Ford', 'Paul', '4045 Aspen Hills Dr. \nAustin, TX', '563-650-2859', True, date,
-                '50,000')
+#emp = Employee('Ruiz', 'Matthew', '4045 Aspen Hills Dr. \nAustin, TX', '563-650-2859', False, date,
+#               '10.00')  # call the constructor, needs to have a first and last name in parameter
+#emp1 = Employee('Ford', 'Paul', '4045 Aspen Hills Dr. \nAustin, TX', '563-650-2859', True, date,
+#                '50,000')
 
-print(emp.display())  # display returns a str, so print the information
-print(emp1.display())
-del emp  # clean up!
-del emp1
+#print(emp.display())  # display returns a str, so print the information
+#(emp1.display())
+# emp  # clean up!
+#del emp1
