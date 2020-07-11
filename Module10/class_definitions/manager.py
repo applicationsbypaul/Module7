@@ -8,6 +8,7 @@ from datetime import datetime
 
 from Module10.class_definitions.employee import Employee
 from Module10.class_definitions.persons import Persons
+from Module10.class_definitions.salaried_employee import SalariedEmployee
 
 
 class Manager(Employee, Persons):
